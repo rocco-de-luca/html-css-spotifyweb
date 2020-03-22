@@ -1,0 +1,191 @@
+@media (min-width: 601px) and (max-width: 1024) {
+    .content-menu ul li a {
+        font-size: 12px;
+        padding: 5px;
+    }
+   
+    .album .item {
+        /*width: 250px;
+        height: 270px;*/
+        margin: 10px; 
+        margin-top: 100px;
+        position: relative;
+        cursor: pointer; 
+        flex-basis: 23%;
+    }
+         
+    
+
+    .icon-yellow {
+        height: 80px; /*debug*/   
+       font-size: 20px;
+    }
+
+    .time {
+        background-color: grey;
+        min-width: 300px;
+        min-height: 6px;
+        /* flex-basis: 30%; */
+        position: absolute;
+        left: 50%;
+        margin-left: -150px;
+        top: 103%;
+        margin-top: -30px;
+        border-radius: 20px;
+    }
+
+    .barra-time {
+        background-color: #fff;
+        /* flex-basis: 30%; */
+        min-width: 100px;
+        min-height: 6px;
+        position: absolute;
+        right: 55%;
+        margin-left: -150px;
+        top: 50%;
+        margin-top: 23px;
+        border-radius: 20px;
+    }
+
+    .volume-audio {
+        background-color: grey;
+        min-width: 100px;
+        min-height: 2px;
+        /*flex-basis: 30%;*/
+        position:absolute;
+        left:100%;
+        margin-left:-150px;
+        top:77%;
+        margin-top:-30px;
+        border-radius: 20px;
+    }
+
+    
+    .barra-volume-audio {
+        background-color: #fff;
+        /*flex-basis:30%;*/
+        min-width: 50px;
+        min-height: 2px;
+        position:absolute;
+        right: 13%;
+        margin-left:-100px;
+        top:77%;
+        margin-top:-30px;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    #sidebar {
+        flex-basis: 230px; /* larghezza sidebar */
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .sidebar-top{
+        width: 230px;
+    }
+
+    .content-menu ul li a {
+        text-decoration: none;
+        color: #fff;
+        padding: 10px;
+        display: block;
+        font-size: x-small;
+    }
+
+    .album .item {
+        margin: 10px;
+        margin-top: 20px;
+        position: relative;
+        cursor: pointer;
+        flex-basis: 44%;
+    }
+
+    
+        .icon-yellow {
+            height: 80px;
+            font-size: 21px;
+        }
+    
+
+        .icon-yellow ul {
+            padding: 0;
+            list-style-type: none;
+            margin-left: -30px;
+            margin-top: 10px;
+        }
+
+    .time {
+        background-color: grey;
+        min-width: 272px;
+        min-height: 3px;
+        flex-basis: 30%;
+        position: absolute;
+        left: 50%;
+        margin-left: -150px;
+        top: 107%;
+        margin-top: -30px;
+        border-radius: 20px;
+    }
+
+    .barra-time {
+        background-color: #fff;
+        flex-basis: 30%;
+        min-width: 100px;
+        min-height: 3px;
+        position: absolute;
+        right: 59%;
+        margin-left: -150px;
+        top: 107%;
+        margin-top: -30px;
+        border-radius: 20px;
+    }
+
+    .fa-bars, .fa-tv, .fa-volume-up {
+        margin-top: 35px;
+        margin-left: 0px;
+        padding: 4px;
+    }
+
+    .volume-audio {
+        background-color: grey;
+        min-width: 51px;
+        min-height: 2px;
+        /* flex-basis: 30%; */
+        position: absolute;
+        left: 113%;
+        margin-left: -150px;
+        top: 75%;
+        margin-top: -30px;
+        border-radius: 20px;
+    }
+
+    .barra-volume-audio {
+        background-color: #fff;
+        /* flex-basis: 30%; */
+        min-width: 18px;
+        min-height: 2px;
+        position: absolute;
+        right: 12%;
+        margin-left: -100px;
+        top: 75%;
+        margin-top: -30px;
+        border-radius: 20px;
+    }
+
+    .fa-heart, .fa-folder {
+        padding: 2px;
+        color: grey;
+    }
+
+    #player {
+        height: 120px;
+        background: #333;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: relative;
+    }
+}
