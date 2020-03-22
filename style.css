@@ -1,0 +1,598 @@
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #fff;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* LAYOUT */
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: teal;
+}
+
+
+/* MAIN WINDOW */
+#main-window {
+    flex-grow: 1;
+    display: flex;
+    
+}
+
+
+/* SIDEBAR */
+#sidebar {
+    flex-basis: 230px; /* larghezza sidebar */
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.sidebar-top {
+    flex-grow: 1;
+    background-color:#444;
+}
+
+.sidebar-top img {
+    width: 200px;
+    height: 90px;
+    margin: 0px;
+    padding: 0px; 
+}
+
+#sidebar .icon-sidebar-top {
+    width: 50px;
+    height: 25px;
+}
+
+.fa-plus-square {
+    color:grey;
+    padding: 10px;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.nav-sidebar-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #444;
+    
+}
+
+#sidebar ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+#sidebar ul li {
+    list-style-type: none;
+
+}
+
+#sidebar ul li a {
+    text-decoration: none;
+    font-size: 12px;
+    color: white;
+    padding: 5px;
+    display: block;  
+}
+
+#sidebar a:hover {
+    color: #fff;
+    font-weight: bolder;
+}
+
+.sidebar-bottom {
+    height: 80px; /*debug*/
+    background-color: #222;
+}
+
+.sidebar-bottom img {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    
+}
+
+.nav-sidebar-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #222;
+}
+
+.nav-sidebar-bottom ul li {
+    list-style-type: none;
+}
+
+.sidebar-bottom  a {
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    padding: 5px;
+    display: block;  
+}
+
+
+
+#sidebar .sidebar-bottom .nav-sidebar-bottom a:hover {
+    color: green;
+    font-weight: bolder;
+}
+
+/* CONTENT */
+#content {
+    position: relative;
+    flex-grow: 1;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background-color: #333;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.content-top-bar a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    padding: 20px;
+   margin: 15px;
+   margin-right: 15px;
+}
+
+.content-top-bar a:hover {
+    border-color: green;
+    color: green;
+}
+
+#content .scrollable {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    /* 90px = height di content-top-bar */
+    padding: 90px 15px 30px;
+}
+
+.content-menu {
+    height: 80px; /*debug*/
+    background-color: #222;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+.content-menu ul {
+    padding:0;
+    list-style-type: none;
+}
+
+.content-menu ul li {
+    display: inline-block;
+}
+
+.content-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    display: block;
+}
+
+.content-menu ul li a:hover {
+    color: green;
+}
+
+#content .album {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;   
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+   
+.album .item {
+    flex-basis: 23%;
+    /*width: 250px;
+    height: 270px;*/
+    margin: 10px; 
+    margin-top: 100px;
+    position: relative;
+    cursor: pointer; 
+    
+      
+}
+
+.album .item:hover .overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.album .item img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.album .item h3 {
+text-align: center;
+color: #fff;
+font-size: 14px;
+}
+
+.album .item p {
+        text-align: center;
+        color: grey;
+        line-height: 40px;        
+    }
+
+    #content .albumJD {
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;   
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+       
+    .albumJD .item {
+        /*width: 250px;
+        height: 270px;*/
+        flex-basis: 23%;
+        margin: 10px; 
+        margin-top: 30px;
+        position: relative;
+        cursor: pointer; 
+        flex-basis: 23%;
+          
+    }
+
+    .title-albumJD {
+        margin-top: 80px;
+        margin-left: 15px;
+    }
+
+    .span-albumJD {
+        margin-left: 15px;
+        color: grey;
+        font-size: 14px;
+    }
+    
+    .albumJD .item:hover .overlay {
+        display: flex;
+        align-items: center;
+        justify-content: center;    
+    }
+    
+    .albumJD .item img {
+        width:100%;
+        height:100%;
+        object-fit: cover;
+    }
+    
+    .overlay {
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    
+    .albumJD .item h3 {
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    }
+    
+    #content .album {
+    
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;   
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+       
+    .album .item {
+        /*width: 250px;
+        height: 270px;*/
+        margin: 10px; 
+        margin-top: 100px;
+        position: relative;
+        cursor: pointer; 
+        flex-basis: 23%;
+          
+    }
+    
+    .album .item:hover .overlay {
+        display: flex;
+        align-items: center;
+        justify-content: center;    
+    }
+    
+    .album .item img {
+        width:100%;
+        height:100%;
+        object-fit: cover;
+    }
+    
+    .overlay {
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    
+    .album .item h3 {
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    }
+    
+    .album .item p {
+            text-align: center;
+            color: grey;
+            line-height: 40px;        
+        }
+    
+        #content .most-popular-artists {
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;   
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+           
+        .most-popular-artists .item {
+            /*width: 250px;
+            height: 270px;*/
+            margin: 10px; 
+            margin-top: 30px;
+            position: relative;
+            cursor: pointer; 
+            flex-basis: 23%;
+              border: 1px solid transparent;
+              border-radius: 50%;
+        }
+    
+        .title-most-popular-artists {
+            margin-top: 80px;
+            margin-left: 15px;
+        }
+    
+        .span-most-popular-artists {
+            margin-left: 15px;
+            color: grey;
+            font-size: 14px;
+        }
+        
+        .most-popular-artists .item:hover .overlay {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid transparent;
+            border-radius: 50%;  
+        }
+        
+        .most-popular-artists .item img {
+            width:100%;
+            height:100%;
+            object-fit: cover;
+            border: 1px solid transparent;
+            border-radius: 50%;
+        }
+        
+        .overlay {
+            position: absolute;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+        
+        .most-popular-artists .item h3 {
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+        }
+
+        /* BOTTOM PLAYER */
+
+
+        #player {
+           /* height: 280px;*/ /*debug*/
+            background: #333;
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            position: relative;
+            }
+
+            
+          .blue {
+                background: #333;
+            flex-basis: 30%;
+            /*min-width: 600px;*/
+            height: 100px;
+                
+          }
+
+          .blue img {
+              width: 60px;
+              height: 60px;
+              margin-top: 20px;
+              margin-left: 20px;
+          }
+
+            .fa-heart,
+            .fa-folder {
+                padding: 5px;
+                color: grey;
+            }
+
+          .yellow {
+            flex-basis: 30%;
+            background: #333; 
+            /*min-width: 600px;*/
+            height: 100px;
+        }
+
+          .icon-yellow {
+            height: 80px; /*debug*/   
+            font-size: 30px; 
+        }
+
+     
+   
+        .icon-yellow ul {
+            padding:0;
+            list-style-type: none;
+           margin-left: 80px;
+           margin-top: 10px;
+        }
+        
+        .icon-yellow ul li {
+            display: inline-block;
+        }
+        
+        .icon-yellow ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px;
+            display: block;
+        }
+        
+        .icon-yellow ul li a:hover {
+            color: green;
+        }
+
+        .red {
+            flex-basis: 30%;
+            background: #333;
+            /*min-width: 600px;*/
+            height: 100px;
+            
+          }
+
+          .red a {
+              text-decoration: none;
+              color: #fff;
+          }
+
+          .fa-bars,
+          .fa-tv,
+          .fa-volume-up {
+              margin-top: 35px;
+              margin-left: 10px;
+              padding: 5px;
+          }
+       
+        .time {
+                background-color: grey;
+                min-width: 300px;
+                min-height: 6px;
+                /*flex-basis: 30%;*/
+                position:absolute;
+                left:50%;
+                margin-left:-150px;
+                top:50%;
+                margin-top:-30px;
+                border-radius: 20px;
+                 
+            }
+
+        .time:hover {
+                color: green;
+                height: 6px;
+                
+            }
+            
+            .barra-time {
+                background-color: #fff;
+                /*flex-basis:30%;*/
+                min-width: 100px;
+                min-height: 6px;
+                position:absolute;
+                right:55%;
+                margin-left:-150px;
+                top:50%;
+                margin-top:-30px;
+                border-radius: 20px;
+            }
+
+            .volume-audio {
+                background-color: grey;
+                min-width: 100px;
+                min-height: 2px;
+                /*flex-basis: 30%;*/
+                position:absolute;
+                left:92%;
+                margin-left:-150px;
+                top:37%;
+                margin-top:-30px;
+                border-radius: 20px;
+            }
+
+            .barra-volume-audio {
+                background-color: #fff;
+                /*flex-basis:30%;*/
+                min-width: 50px;
+                min-height: 2px;
+                position:absolute;
+                right: 17%;
+                margin-left:-100px;
+                top:37%;
+                margin-top:-30px;
+                border-radius: 20px;
+            }
